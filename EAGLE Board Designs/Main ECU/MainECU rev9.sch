@@ -5076,6 +5076,7 @@ Note: The Sparkfun version includes many other packages including surface mount 
 <part name="U$14" library="HyTechDevices" deviceset="RT424009" device=""/>
 <part name="R12" library="HyTechDevices" deviceset="RESISTOR" device="0805-RES" value="2k"/>
 <part name="GND11" library="HyTechSymbols" deviceset="GND" device=""/>
+<part name="R13" library="HyTechDevices" deviceset="RESISTOR" device="0805-RES" value="20"/>
 </parts>
 <sheets>
 <sheet>
@@ -5331,8 +5332,8 @@ on measured spikes and circuit behavior</text>
 <instance part="GND6" gate="1" x="78.74" y="180.34" smashed="yes">
 <attribute name="VALUE" x="76.2" y="177.8" size="1.778" layer="96"/>
 </instance>
-<instance part="GND19" gate="1" x="119.38" y="195.58" smashed="yes">
-<attribute name="VALUE" x="116.84" y="193.04" size="1.778" layer="96"/>
+<instance part="GND19" gate="1" x="134.62" y="203.2" smashed="yes" rot="R180">
+<attribute name="VALUE" x="137.16" y="205.74" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R17" gate="G$1" x="137.16" y="180.34" smashed="yes">
 <attribute name="NAME" x="133.35" y="181.8386" size="1.778" layer="95"/>
@@ -6421,6 +6422,10 @@ on measured spikes and circuit behavior</text>
 <instance part="GND11" gate="1" x="99.06" y="236.22" smashed="yes" rot="R270">
 <attribute name="VALUE" x="96.52" y="238.76" size="1.778" layer="96" rot="R270"/>
 </instance>
+<instance part="R13" gate="G$1" x="124.46" y="198.12" smashed="yes">
+<attribute name="NAME" x="120.65" y="199.6186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="120.65" y="194.818" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -6978,11 +6983,6 @@ on measured spikes and circuit behavior</text>
 <wire x1="228.6" y1="10.16" x2="226.06" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GND19" gate="1" pin="GND"/>
-<wire x1="119.38" y1="198.12" x2="114.3" y2="198.12" width="0.1524" layer="91"/>
-<pinref part="U$14" gate="G$1" pin="4"/>
-</segment>
-<segment>
 <pinref part="R58" gate="G$1" pin="2"/>
 <wire x1="271.78" y1="68.58" x2="271.78" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="R21" gate="G$1" pin="2"/>
@@ -7055,6 +7055,12 @@ on measured spikes and circuit behavior</text>
 <pinref part="R12" gate="G$1" pin="2"/>
 <pinref part="GND11" gate="1" pin="GND"/>
 <wire x1="104.14" y1="236.22" x2="101.6" y2="236.22" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R13" gate="G$1" pin="2"/>
+<pinref part="GND19" gate="1" pin="GND"/>
+<wire x1="129.54" y1="198.12" x2="134.62" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="198.12" x2="134.62" y2="200.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+12V" class="0">
@@ -9579,6 +9585,13 @@ on measured spikes and circuit behavior</text>
 <wire x1="220.98" y1="63.5" x2="218.44" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="58.42" x2="220.98" y2="63.5" width="0.1524" layer="91"/>
 <junction x="220.98" y="63.5"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="U$14" gate="G$1" pin="4"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="198.12" x2="119.38" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
